@@ -10,11 +10,11 @@ import UIKit
 import ObjectMapper
 open class Type: NSObject, Mappable {
     
-    open var id: Int64?
-    open var titulo: String?
-    open var icono: String?
-    open var iconoRedondeado: String?
-    open var iconoCuadrado: String?
+    public var id: Int64?
+    public var titulo: String?
+    public var icono: String?
+    public var iconoRedondeado: String?
+    public var iconoCuadrado: String?
     public  required convenience init?(map: Map) {
         self.init()
     }

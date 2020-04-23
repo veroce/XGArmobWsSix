@@ -9,8 +9,8 @@
 import UIKit
 import ObjectMapper
 open class Photo: NSObject {
-    var thumbnail: String?
-    var foto: String?
+    public var thumbnail: String?
+    public var foto: String?
     
    public required convenience init?(map: Map) {
         self.init()

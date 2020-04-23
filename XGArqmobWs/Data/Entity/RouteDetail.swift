@@ -10,37 +10,37 @@ import UIKit
 import ObjectMapper
 open class RouteDetail: NSObject, Mappable {
     
-    var distancia: String?
-    var servicios: String?
-    var urlFicha: String?
-    var puntoLlegada: String?
-    var duracion: String?
-    var codigo: String?
-    var circular: String?
-    var urlKml: String?
-    var mideItinerario: String?
-    var coordenadas: Coordinates?
-    var perfilElevacion: String?
-    var desnivel: Unevenness?
-    var fotos: Array<Photo>?
-    var distanciaInfo: String?
-    var puntoPartida: String?
-    var recorrido: String?
-    var mideDesplazamiento: String?
-    var accesos: String?
-    var nid: String?
-    var accesoCaballo: String?
-    var dificultad: String?
-    var material: String?
-    var masInfo: String?
-    var titulo: String?
-    var conexiones: String?
-    var mideEsfuerzo: String?
-    var mideMedio: String?
-    var acccesoBicicleta: String?
-    var nivelMar: Unevenness?
-    var descripcion: String?
-    var interes: String?
+    public var distancia: String?
+    public var servicios: String?
+    public var urlFicha: String?
+    public var puntoLlegada: String?
+    public var duracion: String?
+    public var codigo: String?
+    public var circular: String?
+    public var urlKml: String?
+    public var mideItinerario: String?
+    public var coordenadas: Coordinates?
+    public var perfilElevacion: String?
+    public var desnivel: Unevenness?
+    public var fotos: Array<Photo>?
+    public var distanciaInfo: String?
+    public var puntoPartida: String?
+    public var recorrido: String?
+    public var mideDesplazamiento: String?
+    public var accesos: String?
+    public var nid: String?
+    public var accesoCaballo: String?
+    public var dificultad: String?
+    public var material: String?
+    public var masInfo: String?
+    public var titulo: String?
+    public var conexiones: String?
+    public var mideEsfuerzo: String?
+    public var mideMedio: String?
+    public var acccesoBicicleta: String?
+    public var nivelMar: Unevenness?
+    public var descripcion: String?
+    public var interes: String?
     
     
     public required convenience init?(map: Map) {

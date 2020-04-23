@@ -9,8 +9,8 @@
 import UIKit
 import ObjectMapper
 open class Unevenness: NSObject {
-    var subida: String?
-    var bajada: String?
+    public var subida: String?
+    public var bajada: String?
     
     public required convenience init?(map: Map) {
         self.init()

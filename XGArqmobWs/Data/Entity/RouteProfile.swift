@@ -9,9 +9,9 @@
 import UIKit
 import ObjectMapper
 open class RouteProfile: NSObject, Mappable {
-    var latitud: String?
-    var longitud: String?
-    var z: String?
+    public var latitud: String?
+    public var longitud: String?
+    public var z: String?
     
     public required convenience init?(map: Map) {
            self.init()

@@ -9,31 +9,31 @@
 import UIKit
 import ObjectMapper
 open class Place: NSObject, Mappable {
-    var id: Int64?
-    var uid: Int64?
-    var nombre: String?
-    var distancia: Double?
-    var descripcion: String?
-    var webTurgalicia: String?
-    var calle: String?
-    var lugar: String?
-    var parroquia: String?
-    var municipio: String?
-    var provincia: String?
-    var telefono: String?
-    var fax: String?
-    var email: String?
-    var web: String?
-    var geodestino: String?
-    var subgeodestino: String?
-    var codigoPostal: String?
-    var calidad: String?
-    var numero: String?
-    var latitud: Double?
-    var longitud: Double?
-    var imagenes: Array<Photo>?
-    var tipo: Type?
-    var categoria: Family?
+    public var id: Int64?
+    public var uid: Int64?
+    public var nombre: String?
+    public var distancia: Double?
+    public var descripcion: String?
+    public var webTurgalicia: String?
+    public var calle: String?
+    public var lugar: String?
+    public var parroquia: String?
+    public var municipio: String?
+    public var provincia: String?
+    public var telefono: String?
+    public var fax: String?
+    public var email: String?
+    public var web: String?
+    public var geodestino: String?
+    public var subgeodestino: String?
+    public var codigoPostal: String?
+    public var calidad: String?
+    public var numero: String?
+    public var latitud: Double?
+    public var longitud: Double?
+    public var imagenes: Array<Photo>?
+    public var tipo: Type?
+    public var categoria: Family?
     
     
     public required convenience init?(map: Map) {

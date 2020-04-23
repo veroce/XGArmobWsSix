@@ -9,8 +9,8 @@
 import UIKit
 import ObjectMapper
 open class Coordinates: NSObject, Mappable {
-    var inicio: Location?
-    var fin: Location?
+    public var inicio: Location?
+    public var fin: Location?
     
     
     public required convenience init?(map: Map) {

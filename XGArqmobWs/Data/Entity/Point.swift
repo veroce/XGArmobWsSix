@@ -10,8 +10,8 @@ import UIKit
 import ObjectMapper
 open class Location: NSObject, Mappable {
     
-   open var latitud: String?
-   open var longitud: String?
+   public  var latitud: String?
+   public  var longitud: String?
     
    public required convenience init?(map: Map) {
         self.init()

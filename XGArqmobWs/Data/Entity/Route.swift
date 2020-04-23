@@ -10,17 +10,17 @@ import UIKit
 import ObjectMapper
 open class Route: NSObject, Mappable {
     
-    var distancia: String?
-    var codigo: String?
-    var urlKml: String?
-    var titulo: String?
-    var longitud: String?
-    var latitud: String?
-    var nid: String?
-    var numImagenes: Int?
-    var thumbnail: String?
-    var dificultad: String?
-    var duracion: String?
+    public var distancia: String?
+    public var codigo: String?
+    public var urlKml: String?
+    public var titulo: String?
+    public var longitud: String?
+    public var latitud: String?
+    public var nid: String?
+    public var numImagenes: Int?
+    public var thumbnail: String?
+    public var dificultad: String?
+    public var duracion: String?
     
     
     public required convenience init?(map: Map) {

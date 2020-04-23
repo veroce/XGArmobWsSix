@@ -10,8 +10,8 @@ import UIKit
 import ObjectMapper
 open class Family: NSObject, Mappable {
 
-    var id: Int64?
-    var titulo: String?
+    public var id: Int64?
+    public var titulo: String?
     
     
     public required convenience init?(map: Map) {
