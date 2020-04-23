@@ -9,3 +9,4 @@ target 'XGArqmobWs' do
   pod 'AlamofireObjectMapper', '~> 5.2'
 
 end
+
