@@ -1,0 +1,6 @@
+module Pods_XGArqmobWs {
+  umbrella header "Pods-XGArqmobWs-umbrella.h"
+
+  export *
+  module * { export * }
+}
