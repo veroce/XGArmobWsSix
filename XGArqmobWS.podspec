@@ -34,6 +34,6 @@ s.source_files = "XGArqmobWs/**/*.{swift}"
 #s.resources = "XGArqmobWs/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
 # 10
-s.swift_version = "4.1"
+s.swift_version = "5.1"
 
 end
