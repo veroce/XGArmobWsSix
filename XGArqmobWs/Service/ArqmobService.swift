@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@objc
 open class ArqmobService: NSObject {
     
     public static let shared = ArqmobService()
@@ -22,7 +22,7 @@ open class ArqmobService: NSObject {
      
      - Returns: Listado de los recursos y el estado de la petición.
      */
-    open func getPlaces(location: Location? = nil, language: String = "es", radio: String? = nil, numResults: String? = nil, completionClosure: @escaping (_ responses: Array<Place>?, _ codeStatus:ConstantsStatus)-> ())  {
+    @objc open func getPlaces(location: Location? = nil, language: String = "es", radio: String? = nil, numResults: String? = nil, completionClosure: @escaping (_ responses: Array<Place>?, _ codeStatus:ConstantsStatus)-> ())  {
         var params = "es/"
         if let point = location, let latitud = point.latitud {
             params = params + "\(latitud)/"
@@ -57,7 +57,7 @@ open class ArqmobService: NSObject {
      
      - Returns: Listado de los diferentes tipos de los recursos y el estado de la petición.
      */
-    open func getTypePlaces(language: String = "es", completionClosure: @escaping (_ responses: Array<Type>?, _ codeStatus:ConstantsStatus)-> ())  {
+    @objc open func getTypePlaces(language: String = "es", completionClosure: @escaping (_ responses: Array<Type>?, _ codeStatus:ConstantsStatus)-> ())  {
         let url = ConstantsUrl.SERVER_URL + ConstantsUrl.API_TURISMO_URL + ConstantsUrl.TURISMO_GET_TIPOS + language
         let remote = BaseRemote<Type>()
         remote.getArrayObjects(url: url) { (items, status) in
@@ -75,7 +75,7 @@ open class ArqmobService: NSObject {
      
      - Returns: Detalle de la ruta indicada y estado de la petición
      */
-    open func getRouteDetail(language: String = "es", nid: String, completionClosure: @escaping (_ responses: RouteDetail?, _ codeStatus:ConstantsStatus)-> ())  {
+    @objc open func getRouteDetail(language: String = "es", nid: String, completionClosure: @escaping (_ responses: RouteDetail?, _ codeStatus:ConstantsStatus)-> ())  {
         let url = ConstantsUrl.SERVER_URL + ConstantsUrl.API_SENDEGAL_URL + ConstantsUrl.SENDEGAL_GET_RUTA_FICHA + nid + "/" + language
         
         let remote = BaseRemote<RouteDetail>()
@@ -94,7 +94,7 @@ open class ArqmobService: NSObject {
      
      - Returns: Listado del perfil de la ruta  y estado de la petición
      */
-    open func getRouteProfile(nid: String, completionClosure: @escaping (_ responses: Array<RouteProfile>?, _ codeStatus:ConstantsStatus)-> ())  {
+    @objc open func getRouteProfile(nid: String, completionClosure: @escaping (_ responses: Array<RouteProfile>?, _ codeStatus:ConstantsStatus)-> ())  {
         let url = ConstantsUrl.SERVER_URL + ConstantsUrl.API_SENDEGAL_URL + ConstantsUrl.SENDEGAL_GET_RUTA_PERFIL + nid
         let remote = BaseRemote<RouteProfile>()
         remote.getArrayObjects(url: url) { (items, status) in
@@ -111,7 +111,7 @@ open class ArqmobService: NSObject {
        
        - Returns: Array con las rutas  y estado de la petición
        */
-    open func getRoutes(language: String = "es", completionClosure: @escaping (_ responses: Array<Route>?, _ codeStatus:ConstantsStatus)-> ())  {
+    @objc open func getRoutes(language: String = "es", completionClosure: @escaping (_ responses: Array<Route>?, _ codeStatus:ConstantsStatus)-> ())  {
         
         let url = ConstantsUrl.SERVER_URL + ConstantsUrl.API_SENDEGAL_URL + ConstantsUrl.SENDEGAL_GET_RUTAS + language
         let remote = BaseRemote<RouteResponse>()
