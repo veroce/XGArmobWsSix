@@ -5,13 +5,13 @@
 //  Created by Vero on 16/04/2020.
 //  Copyright © 2020 Soluciones y Proyecto de Información. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import ObjectMapper
 @objc
 open class Photo: NSObject {
-    public var thumbnail: String?
-    public var foto: String?
+    @objc open var thumbnail: String?
+    @objc open var foto: String?
     
    public required convenience init?(map: Map) {
         self.init()

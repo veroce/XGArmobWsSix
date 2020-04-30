@@ -5,13 +5,13 @@
 //  Created by Vero on 16/04/2020.
 //  Copyright © 2020 Soluciones y Proyecto de Información. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import ObjectMapper
 @objc
 open class Coordinates: NSObject, Mappable {
-    public var inicio: Location?
-    public var fin: Location?
+    @objc open var inicio: Location?
+    @objc open var fin: Location?
     
     
     public required convenience init?(map: Map) {

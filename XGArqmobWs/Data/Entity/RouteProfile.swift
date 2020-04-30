@@ -5,14 +5,14 @@
 //  Created by Vero on 16/04/2020.
 //  Copyright © 2020 Soluciones y Proyecto de Información. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import ObjectMapper
 @objc
 open class RouteProfile: NSObject, Mappable {
-    public var latitud: String?
-    public var longitud: String?
-    public var z: String?
+    @objc open var latitud: String?
+    @objc open var longitud: String?
+    @objc open var z: String?
     
     public required convenience init?(map: Map) {
            self.init()

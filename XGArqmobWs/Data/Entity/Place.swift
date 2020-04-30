@@ -5,36 +5,36 @@
 //  Created by Vero on 16/04/2020.
 //  Copyright © 2020 Soluciones y Proyecto de Información. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import ObjectMapper
 @objc
 open class Place: NSObject, Mappable {
     public var id: Int64?
     public var uid: Int64?
-    public var nombre: String?
-    public var distancia: Double?
-    public var descripcion: String?
-    public var webTurgalicia: String?
-    public var calle: String?
-    public var lugar: String?
-    public var parroquia: String?
-    public var municipio: String?
-    public var provincia: String?
-    public var telefono: String?
-    public var fax: String?
-    public var email: String?
-    public var web: String?
-    public var geodestino: String?
-    public var subgeodestino: String?
-    public var codigoPostal: String?
-    public var calidad: String?
-    public var numero: String?
-    public var latitud: Double?
-    public var longitud: Double?
-    public var imagenes: Array<Photo>?
-    public var tipo: Type?
-    public var categoria: Family?
+    @objc open var nombre: String?
+    @objc open var distancia: Double = 0
+    @objc open var descripcion: String?
+    @objc open var webTurgalicia: String?
+    @objc open var calle: String?
+    @objc open var lugar: String?
+    @objc open var parroquia: String?
+    @objc open var municipio: String?
+    @objc open var provincia: String?
+    @objc open var telefono: String?
+    @objc open var fax: String?
+    @objc open var email: String?
+    @objc open var web: String?
+    @objc open var geodestino: String?
+    @objc open var subgeodestino: String?
+    @objc open var codigoPostal: String?
+    @objc open var calidad: String?
+    @objc open var numero: String?
+    @objc open var latitud: Double = 0
+    @objc open var longitud: Double = 0
+    @objc open var imagenes: Array<Photo>?
+    @objc open var tipo: Type?
+    @objc open var categoria: Family?
     
     
     public required convenience init?(map: Map) {

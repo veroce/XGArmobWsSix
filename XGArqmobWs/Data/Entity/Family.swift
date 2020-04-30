@@ -5,14 +5,14 @@
 //  Created by Vero on 16/04/2020.
 //  Copyright © 2020 Soluciones y Proyecto de Información. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import ObjectMapper
 @objc
 open class Family: NSObject, Mappable {
 
-    public var id: Int64?
-    public var titulo: String?
+    open var id: Int64?
+    @objc open var titulo: String?
     
     
     public required convenience init?(map: Map) {

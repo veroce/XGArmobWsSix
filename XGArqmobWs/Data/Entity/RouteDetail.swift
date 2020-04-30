@@ -11,37 +11,37 @@ import ObjectMapper
 @objc
 open class RouteDetail: NSObject, Mappable {
     
-    public var distancia: String?
-    public var servicios: String?
-    public var urlFicha: String?
-    public var puntoLlegada: String?
-    public var duracion: String?
-    public var codigo: String?
-    public var circular: String?
-    public var urlKml: String?
-    public var mideItinerario: String?
+    @objc open var distancia: String?
+    @objc open var servicios: String?
+    @objc open var urlFicha: String?
+    @objc open var puntoLlegada: String?
+    @objc open var duracion: String?
+    @objc open var codigo: String?
+    @objc open var circular: String?
+    @objc open var urlKml: String?
+    @objc open var mideItinerario: String?
     public var coordenadas: Coordinates?
-    public var perfilElevacion: String?
-    public var desnivel: Unevenness?
-    public var fotos: Array<Photo>?
-    public var distanciaInfo: String?
-    public var puntoPartida: String?
-    public var recorrido: String?
-    public var mideDesplazamiento: String?
-    public var accesos: String?
-    public var nid: String?
-    public var accesoCaballo: String?
-    public var dificultad: String?
-    public var material: String?
-    public var masInfo: String?
-    public var titulo: String?
-    public var conexiones: String?
-    public var mideEsfuerzo: String?
-    public var mideMedio: String?
-    public var acccesoBicicleta: String?
-    public var nivelMar: Unevenness?
-    public var descripcion: String?
-    public var interes: String?
+    @objc open var perfilElevacion: String?
+    @objc open var desnivel: Unevenness?
+    @objc open var fotos: Array<Photo>?
+    @objc open var distanciaInfo: String?
+    @objc open var puntoPartida: String?
+    @objc open var recorrido: String?
+    @objc open var mideDesplazamiento: String?
+    @objc open var accesos: String?
+    @objc open var nid: String?
+    @objc open var accesoCaballo: String?
+    @objc open var dificultad: String?
+    @objc open var material: String?
+    @objc open var masInfo: String?
+    @objc open var titulo: String?
+    @objc open var conexiones: String?
+    @objc open var mideEsfuerzo: String?
+    @objc open var mideMedio: String?
+    @objc open var acccesoBicicleta: String?
+    @objc open var nivelMar: Unevenness?
+    @objc open var descripcion: String?
+    @objc open var interes: String?
     
     
     public required convenience init?(map: Map) {

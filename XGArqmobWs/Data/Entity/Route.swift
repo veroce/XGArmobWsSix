@@ -5,23 +5,23 @@
 //  Created by Vero on 16/04/2020.
 //  Copyright © 2020 Soluciones y Proyecto de Información. All rights reserved.
 //
-
+import Foundation
 import UIKit
 import ObjectMapper
 @objc
 open class Route: NSObject, Mappable {
     
-    public var distancia: String?
-    public var codigo: String?
-    public var urlKml: String?
-    public var titulo: String?
-    public var longitud: String?
-    public var latitud: String?
-    public var nid: String?
-    public var numImagenes: Int?
-    public var thumbnail: String?
-    public var dificultad: String?
-    public var duracion: String?
+    @objc open var distancia: String?
+    @objc open var codigo: String?
+    @objc open var urlKml: String?
+    @objc open var titulo: String?
+    @objc open var longitud: String?
+    @objc open var latitud: String?
+    @objc open var nid: String?
+    @objc open var numImagenes: Int = 0
+    @objc open var thumbnail: String?
+    @objc open var dificultad: String?
+    @objc open var duracion: String?
     
     
     public required convenience init?(map: Map) {
