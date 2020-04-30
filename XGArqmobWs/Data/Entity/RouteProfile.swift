@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+@objc
 open class RouteProfile: NSObject, Mappable {
     public var latitud: String?
     public var longitud: String?

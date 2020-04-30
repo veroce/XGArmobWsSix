@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+@objc
 open class Photo: NSObject {
     public var thumbnail: String?
     public var foto: String?

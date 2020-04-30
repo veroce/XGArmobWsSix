@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+@objc
 open class Coordinates: NSObject, Mappable {
     public var inicio: Location?
     public var fin: Location?

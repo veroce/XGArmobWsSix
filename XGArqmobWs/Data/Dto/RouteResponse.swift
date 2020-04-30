@@ -8,14 +8,15 @@
 
 import UIKit
 import ObjectMapper
-class RouteResponse: NSObject, Mappable {
-    var items: Array<Route>?
+@objc
+open class RouteResponse: NSObject, Mappable {
+    public var items: Array<Route>?
     
-    required convenience init?(map: Map) {
+    required convenience public init?(map: Map) {
            self.init()
        }
        
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         items      <- map["roteiros"]
         
     }

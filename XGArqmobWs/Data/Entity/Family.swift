@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+@objc
 open class Family: NSObject, Mappable {
 
     public var id: Int64?

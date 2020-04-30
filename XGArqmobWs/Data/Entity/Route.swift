@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+@objc
 open class Route: NSObject, Mappable {
     
     public var distancia: String?

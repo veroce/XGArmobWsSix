@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+@objc
 open class Unevenness: NSObject {
     public var subida: String?
     public var bajada: String?

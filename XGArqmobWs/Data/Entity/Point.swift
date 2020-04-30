@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+@objc
 open class Location: NSObject, Mappable {
     
    public  var latitud: String?

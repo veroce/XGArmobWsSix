@@ -12,11 +12,11 @@ import ObjectMapper
 import AlamofireObjectMapper
 
 public enum ConstantsStatus:Int {
-    case ok
-    case fail
-    case notFound
-    case notConnection
-    case unauthorized
+    case ok = 200
+    case fail = 500
+    case notFound = 400
+    case notConnection = 0
+    case unauthorized = 401
 }
 enum ResponseError: String {
     case INTERNAL_ERROR = "INTERNAL_ERROR"
