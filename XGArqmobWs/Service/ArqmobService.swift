@@ -7,7 +7,7 @@
 //
 
 import UIKit
-@objc
+@objc(ArqmobService)
 open class ArqmobService: NSObject {
     
     public static let shared = ArqmobService()

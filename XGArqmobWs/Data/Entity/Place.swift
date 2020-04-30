@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 import ObjectMapper
-@objc
+@objc(Place)
 open class Place: NSObject, Mappable {
-    public var id: Int64?
-    public var uid: Int64?
+    @objc open var id: Int64 = 0
+    @objc open var uid: Int64 = 0
     @objc open var nombre: String?
     @objc open var distancia: Double = 0
     @objc open var descripcion: String?

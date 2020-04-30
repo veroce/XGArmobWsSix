@@ -11,7 +11,7 @@ import ObjectMapper
 @objc
 open class Family: NSObject, Mappable {
 
-    open var id: Int64?
+    @objc open var id: Int64 = 0
     @objc open var titulo: String?
     
     

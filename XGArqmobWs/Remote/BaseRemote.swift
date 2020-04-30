@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
-
+@objc
 public enum ConstantsStatus:Int {
     case ok = 200
     case fail = 500

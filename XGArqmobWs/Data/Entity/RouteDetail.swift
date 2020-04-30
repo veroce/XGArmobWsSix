@@ -20,7 +20,7 @@ open class RouteDetail: NSObject, Mappable {
     @objc open var circular: String?
     @objc open var urlKml: String?
     @objc open var mideItinerario: String?
-    public var coordenadas: Coordinates?
+    @objc open var coordenadas: Coordinates?
     @objc open var perfilElevacion: String?
     @objc open var desnivel: Unevenness?
     @objc open var fotos: Array<Photo>?

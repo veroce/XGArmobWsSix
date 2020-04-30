@@ -20,7 +20,7 @@
 		D6BACD4624517CC900DA2D72 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3724517CC900DA2D72 /* Place.swift */; };
 		D6BACD4724517CC900DA2D72 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3824517CC900DA2D72 /* Photo.swift */; };
 		D6BACD4824517CC900DA2D72 /* RouteProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3924517CC900DA2D72 /* RouteProfile.swift */; };
-		D6BACD4924517CC900DA2D72 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3A24517CC900DA2D72 /* Point.swift */; };
+		D6BACD4924517CC900DA2D72 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3A24517CC900DA2D72 /* Location.swift */; };
 		D6BACD4A24517CC900DA2D72 /* Unevenness.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3B24517CC900DA2D72 /* Unevenness.swift */; };
 		D6BACD4B24517CC900DA2D72 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3C24517CC900DA2D72 /* Route.swift */; };
 		D6BACD4C24517CC900DA2D72 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3D24517CC900DA2D72 /* Coordinates.swift */; };
@@ -44,7 +44,7 @@
 		D6BACD3724517CC900DA2D72 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		D6BACD3824517CC900DA2D72 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		D6BACD3924517CC900DA2D72 /* RouteProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteProfile.swift; sourceTree = "<group>"; };
-		D6BACD3A24517CC900DA2D72 /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		D6BACD3A24517CC900DA2D72 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D6BACD3B24517CC900DA2D72 /* Unevenness.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unevenness.swift; sourceTree = "<group>"; };
 		D6BACD3C24517CC900DA2D72 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		D6BACD3D24517CC900DA2D72 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 				D6BACD3724517CC900DA2D72 /* Place.swift */,
 				D6BACD3824517CC900DA2D72 /* Photo.swift */,
 				D6BACD3924517CC900DA2D72 /* RouteProfile.swift */,
-				D6BACD3A24517CC900DA2D72 /* Point.swift */,
+				D6BACD3A24517CC900DA2D72 /* Location.swift */,
 				D6BACD3B24517CC900DA2D72 /* Unevenness.swift */,
 				D6BACD3C24517CC900DA2D72 /* Route.swift */,
 				D6BACD3D24517CC900DA2D72 /* Coordinates.swift */,
@@ -285,7 +285,7 @@
 				D6BACD4424517CC900DA2D72 /* Type.swift in Sources */,
 				D6BACD4C24517CC900DA2D72 /* Coordinates.swift in Sources */,
 				D6BACD3F24517CC900DA2D72 /* ConstantsUrl.swift in Sources */,
-				D6BACD4924517CC900DA2D72 /* Point.swift in Sources */,
+				D6BACD4924517CC900DA2D72 /* Location.swift in Sources */,
 				D6BACD4624517CC900DA2D72 /* Place.swift in Sources */,
 				D6BACD4524517CC900DA2D72 /* RouteDetail.swift in Sources */,
 				D6BACD4324517CC900DA2D72 /* Family.swift in Sources */,

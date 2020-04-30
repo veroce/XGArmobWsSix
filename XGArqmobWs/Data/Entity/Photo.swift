@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import ObjectMapper
-@objc
+@objc(Photo)
 open class Photo: NSObject {
     @objc open var thumbnail: String?
     @objc open var foto: String?
