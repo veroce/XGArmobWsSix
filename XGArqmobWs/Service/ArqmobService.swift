@@ -5,7 +5,6 @@
 //  Created by Vero on 16/04/2020.
 //  Copyright © 2020 Soluciones y Proyecto de Información. All rights reserved.
 //
-
 import UIKit
 @objc(ArqmobService)
 open class ArqmobService: NSObject {
@@ -107,7 +106,7 @@ open class ArqmobService: NSObject {
     @nonobjc open func getRouteProfile(nid: String, completionClosure: @escaping (_ responses: Array<RouteProfile>?, _ codeStatus:ConstantsStatus)-> ())  {
         let url = ConstantsUrl.SERVER_URL + ConstantsUrl.API_SENDEGAL_URL + ConstantsUrl.SENDEGAL_GET_RUTA_PERFIL + nid
         let remote = BaseRemote<RouteProfile>()
-        remote.getArrayObjects(url: url) { (items, status) in
+        remote.getArrayObjects(url: url, headers: remote.getHeaders()) { (items, status) in
             completionClosure(items, status)
         }
         
@@ -124,7 +123,7 @@ open class ArqmobService: NSObject {
     @objc open func getRouteProfile(nid: String, completionClosure: @escaping (_ responses: Array<RouteProfile>?, _ codeStatus:Int)-> ())  {
         let url = ConstantsUrl.SERVER_URL + ConstantsUrl.API_SENDEGAL_URL + ConstantsUrl.SENDEGAL_GET_RUTA_PERFIL + nid
         let remote = BaseRemote<RouteProfile>()
-        remote.getArrayObjects(url: url) { (items, status) in
+        remote.getArrayObjects(url: url, headers: remote.getHeaders()) { (items, status) in
             completionClosure(items, status.rawValue)
         }
         
@@ -170,7 +169,5 @@ open class ArqmobService: NSObject {
             
         }
     }
-
-
     
 }

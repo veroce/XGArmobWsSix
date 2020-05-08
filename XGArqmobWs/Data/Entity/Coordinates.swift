@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import ObjectMapper
 @objc
-open class Coordinates: NSObject, Mappable {
+open class Coordinates: NSObject, Mappable, NSCoding {
     @objc open var inicio: Location?
     @objc open var fin: Location?
     
@@ -21,5 +21,20 @@ open class Coordinates: NSObject, Mappable {
     public func mapping(map: Map) {
         inicio      <- map["inicio"]
         fin         <- map["fin"]
+    }
+    
+    // MARK: NSCoding
+    required public convenience init?(coder decoder: NSCoder) {
+        self.init()
+        
+        self.inicio              = decoder.decodeObject(forKey: "fin")             as? Location
+        self.fin                 = decoder.decodeObject(forKey: "fin")             as? Location
+        
+    }
+    
+    public func encode(with coder: NSCoder) {
+        
+        coder.encode(self.inicio,     forKey: "inicio")
+        coder.encode(self.fin,           forKey: "fin")
     }
 }

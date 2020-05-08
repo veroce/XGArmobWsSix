@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import ObjectMapper
 @objc
-open class Unevenness: NSObject {
+open class Unevenness: NSObject, Mappable, NSCoding {
     @objc open var subida: String?
     @objc open var bajada: String?
     
@@ -19,6 +19,21 @@ open class Unevenness: NSObject {
     
     public func mapping(map: Map) {
         subida      <- map["subida"]
-        bajada      <- map["bajada"]
+        bajada      <- map["baixada"]
     }
+    // MARK: NSCoding
+    required public convenience init?(coder decoder: NSCoder) {
+        self.init()
+        
+        self.subida              = decoder.decodeObject(forKey: "subida")             as? String
+        self.bajada              = decoder.decodeObject(forKey: "bajada")             as? String
+        
+    }
+    
+    public func encode(with coder: NSCoder) {
+        
+        coder.encode(self.subida,            forKey: "subida")
+        coder.encode(self.bajada,           forKey: "bajada")
+    }
+    
 }

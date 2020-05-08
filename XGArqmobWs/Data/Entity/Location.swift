@@ -9,17 +9,32 @@ import Foundation
 import UIKit
 import ObjectMapper
 @objc
-open class Location: NSObject, Mappable {
+open class Location: NSObject, Mappable,NSCoding {
     
-   @objc open  var latitud: String?
-   @objc open  var longitud: String?
+    @objc open  var latitud: String?
+    @objc open  var longitud: String?
     
-   public required convenience init?(map: Map) {
+    public required convenience init?(map: Map) {
         self.init()
     }
     
-   public func mapping(map: Map) {
-        latitud     <- map["lonx"]
-        longitud    <- map["lat"]
+    public func mapping(map: Map) {
+        latitud     <- map["lat"]
+        longitud    <- map["lonx"]
+    }
+    
+    // MARK: NSCoding
+    required public convenience init?(coder decoder: NSCoder) {
+        self.init()
+        
+        self.latitud              = decoder.decodeObject(forKey: "latitud")             as? String
+        self.longitud              = decoder.decodeObject(forKey: "longitud")             as? String
+        
+    }
+    
+    public func encode(with coder: NSCoder) {
+        
+        coder.encode(self.latitud,            forKey: "latitud")
+        coder.encode(self.longitud,           forKey: "longitud")
     }
 }

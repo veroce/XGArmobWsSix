@@ -24,5 +24,21 @@ open class RouteProfile: NSObject, Mappable {
         longitud    <- map["lon"]
         z           <- map["z"]
     }
+    // MARK: NSCoding
+    required public convenience init?(coder decoder: NSCoder) {
+        self.init()
+        
+        self.latitud              = decoder.decodeObject(forKey: "latitud")       as? String
+        self.longitud             = decoder.decodeObject(forKey: "longitud")      as? String
+        self.z                    = decoder.decodeObject(forKey: "z")             as? String
 
+        
+    }
+    
+    public func encode(with coder: NSCoder) {
+        
+        coder.encode(self.latitud,              forKey: "latitud")
+        coder.encode(self.longitud,             forKey: "longitud")
+         coder.encode(self.z,                   forKey: "z")
+    }
 }
