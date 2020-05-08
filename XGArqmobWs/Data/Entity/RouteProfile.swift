@@ -9,16 +9,16 @@ import Foundation
 import UIKit
 import ObjectMapper
 @objc
-open class RouteProfile: NSObject, Mappable {
+open class RouteProfile: NSObject, Mappable, NSCoding {
     @objc open var latitud: String?
     @objc open var longitud: String?
     @objc open var z: String?
     
     public required convenience init?(map: Map) {
-           self.init()
-       }
-       
-     public  func mapping(map: Map) {
+        self.init()
+    }
+    
+    public  func mapping(map: Map) {
         
         latitud     <- map["lat"]
         longitud    <- map["lon"]
@@ -31,7 +31,7 @@ open class RouteProfile: NSObject, Mappable {
         self.latitud              = decoder.decodeObject(forKey: "latitud")       as? String
         self.longitud             = decoder.decodeObject(forKey: "longitud")      as? String
         self.z                    = decoder.decodeObject(forKey: "z")             as? String
-
+        
         
     }
     
@@ -39,6 +39,6 @@ open class RouteProfile: NSObject, Mappable {
         
         coder.encode(self.latitud,              forKey: "latitud")
         coder.encode(self.longitud,             forKey: "longitud")
-         coder.encode(self.z,                   forKey: "z")
+        coder.encode(self.z,                   forKey: "z")
     }
 }
