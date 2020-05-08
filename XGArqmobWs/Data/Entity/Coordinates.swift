@@ -27,7 +27,7 @@ open class Coordinates: NSObject, Mappable, NSCoding {
     required public convenience init?(coder decoder: NSCoder) {
         self.init()
         
-        self.inicio              = decoder.decodeObject(forKey: "fin")             as? Location
+        self.inicio              = decoder.decodeObject(forKey: "inicio")             as? Location
         self.fin                 = decoder.decodeObject(forKey: "fin")             as? Location
         
     }

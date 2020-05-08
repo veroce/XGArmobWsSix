@@ -10,6 +10,10 @@ import UIKit
 open class ArqmobService: NSObject {
     
     public static let shared = ArqmobService()
+    
+    @objc class func sharedInstance() -> ArqmobService {
+       return ArqmobService.shared
+     }
     /**
      Permite obtener un listado de todos los recursos que se encuentran dentro de un radio de la localización indicada.
      

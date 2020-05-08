@@ -123,7 +123,7 @@ open class RouteDetail: NSObject, Mappable, NSCoding {
     }
     
     public func encode(with coder: NSCoder) {
-        // coder.encode(self.perfilJSON,          forKey: "perfilJSON")
+        coder.encode(self.perfilJSON,          forKey: "perfilJSON")
         coder.encode(self.isUrlKMLLOCAL,       forKey: "isUrlKMLLOCAL")
         coder.encode(self.distancia,           forKey: "distancia")
         coder.encode(self.servicios,           forKey: "servicios")
