@@ -1,4 +1,4 @@
-module Pods_XGArqmobWs {
+framework module Pods_XGArqmobWs {
   umbrella header "Pods-XGArqmobWs-umbrella.h"
 
   export *

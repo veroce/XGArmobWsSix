@@ -19,7 +19,13 @@ open class Photo: NSObject, Mappable, NSCoding {
     
     public func mapping(map: Map) {
         thumbnail       <- map["urlThumb"]
+        if thumbnail == nil {
+            thumbnail   <- map["url_thumb"]
+        }
         foto            <- map["urlFoto"]
+        if foto == nil {
+            foto    <- map["url_foto"]
+        }
     }
     // MARK: NSCoding
     required public convenience init?(coder decoder: NSCoder) {

@@ -25,7 +25,7 @@ open class ArqmobService: NSObject {
      
      - Returns: Listado de los recursos y el estado de la petición.
      */
-    @nonobjc open func getPlaces(location: Location? = nil, language: String = "es", radio: String? = nil, numResults: String? = nil, completionClosure: @escaping (_ responses: Array<Place>?, _ codeStatus:ConstantsStatus)-> ())  {
+    @nonobjc open func getPlaces(location: Location? = nil, language: String = "es", radio: String? = nil, numResults: String? = nil,filterTypes: Array<Int64>? = nil, completionClosure: @escaping (_ responses: Array<Place>?, _ codeStatus:ConstantsStatus)-> ())  {
         var params = "es/"
         if let point = location, let latitud = point.latitud {
             params = params + "\(latitud)/"
@@ -39,6 +39,11 @@ open class ArqmobService: NSObject {
         
         if let numResults = numResults {
             params = params + "\(numResults)"
+        }
+        if let filter = filterTypes {
+            let stringArray = filter.map { String($0) }
+            let paramsType = stringArray.joined(separator: ",")
+            params = params + "/\(paramsType)"
         }
         if params.last == "/" {
             params.removeLast()
