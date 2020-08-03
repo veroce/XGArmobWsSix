@@ -101,15 +101,12 @@ open class ArqmobService: NSObject {
             completionClosure(route, status.rawValue)
         }
         
-        
     }
     /**
      Permite obtener el perfil de una ruta
      
      - Parameters:
         - nid: Nid de la ruta'
-     
-     
      - Returns: Listado del perfil de la ruta  y estado de la petición
      */
     @nonobjc open func getRouteProfile(nid: String, completionClosure: @escaping (_ responses: Array<RouteProfile>?, _ codeStatus:ConstantsStatus)-> ())  {
@@ -179,4 +176,38 @@ open class ArqmobService: NSObject {
         }
     }
     
+    /**
+     Permite obtener las denominaciones de origen
+     
+     - Parameters:
+        - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'es'
+     
+     
+     - Returns: Array con las denominaciones de origen
+     */
+    @nonobjc open func getOriginWith(denominacion: String, language: String = "es", completionClosure: @escaping (_ responses: Array<Origin>?, _ codeStatus:ConstantsStatus)-> ())  {
+        let url = "http://dev.sixtema.es/mocks/enoturismo/\(denominacion)/data.json"
+        let remote = BaseRemote<Origin>()
+        remote.getArrayObjects(url: url, headers: remote.getHeaders()) { (items, status) in
+            completionClosure(items, status)
+        }
+        
+    }
+    /**
+     Permite obtener las denominaciones de origen
+     
+     - Parameters:
+        - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'es'
+     
+     
+     - Returns: Array con las denominaciones de origen
+     */
+    @objc open func getOriginWith(denominacion: String, language: String = "es", completionClosure: @escaping (_ responses: Array<Origin>?, _ codeStatus:Int)-> ())  {
+        let url = "http://dev.sixtema.es/mocks/enoturismo/\(denominacion)/data.json"
+        let remote = BaseRemote<Origin>()
+        remote.getArrayObjects(url: url, headers: remote.getHeaders()) { (items, status) in
+            completionClosure(items, status.rawValue)
+        }
+        
+    }
 }

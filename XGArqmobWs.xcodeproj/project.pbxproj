@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -39,7 +39,56 @@
 		D6BACD4B24517CC900DA2D72 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3C24517CC900DA2D72 /* Route.swift */; };
 		D6BACD4C24517CC900DA2D72 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BACD3D24517CC900DA2D72 /* Coordinates.swift */; };
 		E63EE5B2F84F3C6FDC1F708D /* Pods_XGArqmobWsDemo_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BD03988ECCFECED4F6EE08 /* Pods_XGArqmobWsDemo_Objc.framework */; };
+		FF8383E724D3F3D9003C857D /* OriginType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8383E624D3F3D9003C857D /* OriginType.swift */; };
+		FF8383E924D3F503003C857D /* OriginImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8383E824D3F503003C857D /* OriginImages.swift */; };
+		FF8383EA24D42125003C857D /* XGArqmobWs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BACD1E24517C0600DA2D72 /* XGArqmobWs.framework */; };
+		FF8383EB24D42125003C857D /* XGArqmobWs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6BACD1E24517C0600DA2D72 /* XGArqmobWs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF8383EF24D4213F003C857D /* XGArqmobWs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BACD1E24517C0600DA2D72 /* XGArqmobWs.framework */; };
+		FF8383F024D4213F003C857D /* XGArqmobWs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D6BACD1E24517C0600DA2D72 /* XGArqmobWs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FF92495224D2F45400890F58 /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF92495124D2F45400890F58 /* Origin.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF8383EC24D42125003C857D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6BACD1524517C0600DA2D72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6BACD1D24517C0600DA2D72;
+			remoteInfo = XGArqmobWs;
+		};
+		FF8383F124D4213F003C857D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6BACD1524517C0600DA2D72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6BACD1D24517C0600DA2D72;
+			remoteInfo = XGArqmobWs;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FF8383EE24D42125003C857D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FF8383EB24D42125003C857D /* XGArqmobWs.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8383F324D4213F003C857D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FF8383F024D4213F003C857D /* XGArqmobWs.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		032F68C8126A66848EFD4F2E /* Pods-XGArqmobWsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGArqmobWsDemo.release.xcconfig"; path = "Target Support Files/Pods-XGArqmobWsDemo/Pods-XGArqmobWsDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +139,9 @@
 		F7BD03988ECCFECED4F6EE08 /* Pods_XGArqmobWsDemo_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XGArqmobWsDemo_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F84E9DCEDDE9447E448A8622 /* Pods_XGArqmobWsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XGArqmobWsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D626855FCA6691600C1524 /* Pods-XGArqmobWsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XGArqmobWsDemo.debug.xcconfig"; path = "Target Support Files/Pods-XGArqmobWsDemo/Pods-XGArqmobWsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FF8383E624D3F3D9003C857D /* OriginType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginType.swift; sourceTree = "<group>"; };
+		FF8383E824D3F503003C857D /* OriginImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginImages.swift; sourceTree = "<group>"; };
+		FF92495124D2F45400890F58 /* Origin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E63EE5B2F84F3C6FDC1F708D /* Pods_XGArqmobWsDemo_Objc.framework in Frameworks */,
+				FF8383EF24D4213F003C857D /* XGArqmobWs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28C9AFA4BC3E672C6DDA120A /* Pods_XGArqmobWsDemo.framework in Frameworks */,
+				FF8383EA24D42125003C857D /* XGArqmobWs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +320,9 @@
 				D6BACD3B24517CC900DA2D72 /* Unevenness.swift */,
 				D6BACD3C24517CC900DA2D72 /* Route.swift */,
 				D6BACD3D24517CC900DA2D72 /* Coordinates.swift */,
+				FF92495124D2F45400890F58 /* Origin.swift */,
+				FF8383E624D3F3D9003C857D /* OriginType.swift */,
+				FF8383E824D3F503003C857D /* OriginImages.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -293,10 +350,12 @@
 				D6B9F5BB24640649002AAD70 /* Frameworks */,
 				D6B9F5BC24640649002AAD70 /* Resources */,
 				B801D903832D0800AF049CC9 /* [CP] Embed Pods Frameworks */,
+				FF8383F324D4213F003C857D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FF8383F224D4213F003C857D /* PBXTargetDependency */,
 			);
 			name = "XGArqmobWsDemo-Objc";
 			productName = "XGArqmobWsDemo-Objc";
@@ -312,10 +371,12 @@
 				D6B9F5D82464065F002AAD70 /* Frameworks */,
 				D6B9F5D92464065F002AAD70 /* Resources */,
 				DBE33AD2B4253F0C17E12F55 /* [CP] Embed Pods Frameworks */,
+				FF8383EE24D42125003C857D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FF8383ED24D42125003C857D /* PBXTargetDependency */,
 			);
 			name = XGArqmobWsDemo;
 			productName = XGArqmobWsDemo;
@@ -549,18 +610,34 @@
 				D6BACD4024517CC900DA2D72 /* BaseRemote.swift in Sources */,
 				D6BACD4B24517CC900DA2D72 /* Route.swift in Sources */,
 				D6BACD4724517CC900DA2D72 /* Photo.swift in Sources */,
+				FF8383E924D3F503003C857D /* OriginImages.swift in Sources */,
 				D6BACD4A24517CC900DA2D72 /* Unevenness.swift in Sources */,
 				D6BACD4424517CC900DA2D72 /* Type.swift in Sources */,
 				D6BACD4C24517CC900DA2D72 /* Coordinates.swift in Sources */,
 				D6BACD3F24517CC900DA2D72 /* ConstantsUrl.swift in Sources */,
 				D6BACD4924517CC900DA2D72 /* Location.swift in Sources */,
 				D6BACD4624517CC900DA2D72 /* Place.swift in Sources */,
+				FF8383E724D3F3D9003C857D /* OriginType.swift in Sources */,
 				D6BACD4524517CC900DA2D72 /* RouteDetail.swift in Sources */,
 				D6BACD4324517CC900DA2D72 /* Family.swift in Sources */,
+				FF92495224D2F45400890F58 /* Origin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF8383ED24D42125003C857D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6BACD1D24517C0600DA2D72 /* XGArqmobWs */;
+			targetProxy = FF8383EC24D42125003C857D /* PBXContainerItemProxy */;
+		};
+		FF8383F224D4213F003C857D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6BACD1D24517C0600DA2D72 /* XGArqmobWs */;
+			targetProxy = FF8383F124D4213F003C857D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D6B9F5C924640649002AAD70 /* Main.storyboard */ = {
@@ -607,6 +684,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V8B6EUK67;
 				INFOPLIST_FILE = "XGArqmobWsDemo-Objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -629,6 +707,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V8B6EUK67;
 				INFOPLIST_FILE = "XGArqmobWsDemo-Objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,6 +728,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V8B6EUK67;
 				INFOPLIST_FILE = XGArqmobWsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,6 +748,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V8B6EUK67;
 				INFOPLIST_FILE = XGArqmobWsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

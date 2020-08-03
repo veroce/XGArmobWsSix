@@ -45,6 +45,10 @@
             NSLog(@"Error en la petición");
         }
     }];
+    
+    [service getOriginWithDenominacion:@"monterrei" language:@"es" completionClosure:^(NSArray<Origin *> * _Nullable items, NSInteger codeStatus) {
+        NSLog(items.firstObject.imagenes.firstObject.url);
+    }];
 
 }
 +(NSString *) OfflineDataDirectoryByID: (NSString *) idCode
