@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 //            }
 //        }
         
+        
         getOriginWith("monterrei") { (items, status) in
             items
         }
@@ -35,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func getOriginWith(_ denominacion: String, completion: @escaping (_ responses: Array<Origin>?, _ codeStatus:ConstantsStatus)-> ())  {
-        ArqmobService.shared.getOriginWith(denominacion: denominacion) { (items, status) in
+        ArqmobService.shared.getOriginWith() { (items, status) in
             completion(items, status)
         }
     }

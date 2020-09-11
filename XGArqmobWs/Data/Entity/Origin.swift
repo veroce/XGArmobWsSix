@@ -22,7 +22,7 @@ open class Origin: NSObject, Mappable {
     @objc open var telefono: String?
     @objc open var email: String?
     @objc open var web: String?
-    @objc open var field_denominacion: String?
+    @objc open var demarcacion: String?
     @objc open var servicios: String?
     @objc open var tipo: OriginType?
     @objc open var imagenes: [OriginImages]?
@@ -46,7 +46,7 @@ open class Origin: NSObject, Mappable {
         telefono                <- map["telefono"]
         email                   <- map["email"]
         web                     <- map["web"]
-        field_denominacion      <- map["field_denominacion"]
+        demarcacion             <- map["demarcacion"]
         servicios               <- map["servicios"]
         tipo                    <- map["tipo"]
         imagenes                <- map["imagenes"]

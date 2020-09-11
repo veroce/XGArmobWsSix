@@ -10,8 +10,10 @@ import UIKit
 
 class ConstantsUrl: NSObject {
     static let SERVER_URL = "http://www.turgalicia.gal/wsra/"
+    static let SERVER_DEV_URL = "https://dev.sixtema.es/enoturismo/"
     static let API_TURISMO_URL = "recursos/"
     static let API_SENDEGAL_URL = "sendegal/"
+    static let API_ENOTURISMO = "enoturismo/"
     
     static let TURISMO_GET_TIPOS = "getTipos/"
     static let TURISMO_GET_CATEGORIAS = "getCategorias/"
@@ -23,6 +25,10 @@ class ConstantsUrl: NSObject {
     
     static let SENDEGAL_HEADER_API_KEY = "x-api-key"
     static let SENDEGAL_HEADER_API_VALUE = "8mCceQJB46eD183y2IF41gK2pjM5E53a7ADxtaUafki21oVZ29l9FzEb21Ow07r4S09nhb"
+    
+    static let ENOTURISMO_GET_RECURSOS = "recursos/listado"
+    static let ENOTURISMO_HEADER_API_KEY = "x-api-key"
+    static let ENOTURISMO_HEADER_API_VALUE = " 8mCceQJB46eD183y2IF41gK2pjM5E53a7ADxtaUafki21oVZ29l9FzEb21Ow07r4S09nhb"
     
     static let LOGIN_URL = "oauth/token"
 

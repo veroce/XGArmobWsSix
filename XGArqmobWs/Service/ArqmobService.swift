@@ -12,8 +12,8 @@ open class ArqmobService: NSObject {
     public static let shared = ArqmobService()
     
     @objc class func sharedInstance() -> ArqmobService {
-       return ArqmobService.shared
-     }
+        return ArqmobService.shared
+    }
     /**
      Permite obtener un listado de todos los recursos que se encuentran dentro de un radio de la localización indicada.
      
@@ -106,7 +106,7 @@ open class ArqmobService: NSObject {
      Permite obtener el perfil de una ruta
      
      - Parameters:
-        - nid: Nid de la ruta'
+     - nid: Nid de la ruta'
      - Returns: Listado del perfil de la ruta  y estado de la petición
      */
     @nonobjc open func getRouteProfile(nid: String, completionClosure: @escaping (_ responses: Array<RouteProfile>?, _ codeStatus:ConstantsStatus)-> ())  {
@@ -121,7 +121,7 @@ open class ArqmobService: NSObject {
      Permite obtener el perfil de una ruta
      
      - Parameters:
-        - nid: Nid de la ruta'
+     - nid: Nid de la ruta'
      
      
      - Returns: Listado del perfil de la ruta  y estado de la petición
@@ -135,14 +135,14 @@ open class ArqmobService: NSObject {
         
     }
     /**
-       Permite obtener un listado con todas las rutas
-       
-       - Parameters:
-          - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'es'
-       
-       
-       - Returns: Array con las rutas  y estado de la petición
-       */
+     Permite obtener un listado con todas las rutas
+     
+     - Parameters:
+     - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'es'
+     
+     
+     - Returns: Array con las rutas  y estado de la petición
+     */
     
     @objc open func getRoutes(language: String = "es", completionClosure: @escaping (_ responses: Array<Route>?, _ codeStatus:Int)-> ())  {
         
@@ -156,14 +156,14 @@ open class ArqmobService: NSObject {
         }
     }
     /**
-       Permite obtener un listado con todas las rutas
-       
-       - Parameters:
-          - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'es'
-       
-       
-       - Returns: Array con las rutas  y estado de la petición
-       */
+     Permite obtener un listado con todas las rutas
+     
+     - Parameters:
+     - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'es'
+     
+     
+     - Returns: Array con las rutas  y estado de la petición
+     */
     @nonobjc open func getRoutes(language: String = "es", completionClosure: @escaping (_ responses: Array<Route>?, _ codeStatus:ConstantsStatus)-> ())  {
         
         let url = ConstantsUrl.SERVER_URL + ConstantsUrl.API_SENDEGAL_URL + ConstantsUrl.SENDEGAL_GET_RUTAS + language
@@ -180,15 +180,23 @@ open class ArqmobService: NSObject {
      Permite obtener las denominaciones de origen
      
      - Parameters:
-        - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'es'
+     - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'es'
      
      
      - Returns: Array con las denominaciones de origen
      */
-    @nonobjc open func getOriginWith(denominacion: String, language: String = "es", completionClosure: @escaping (_ responses: Array<Origin>?, _ codeStatus:ConstantsStatus)-> ())  {
-        let url = "http://dev.sixtema.es/mocks/enoturismo/\(denominacion)/data.json"
+    @nonobjc open func getOriginWith(language: String = "gl", demarcacion: String? = nil, tipo: Int? = nil, completionClosure: @escaping (_ responses: Array<Origin>?, _ codeStatus:ConstantsStatus)-> ())  {
+        let url =  ConstantsUrl.SERVER_DEV_URL + ConstantsUrl.API_ENOTURISMO + ConstantsUrl.ENOTURISMO_GET_RECURSOS
+        var params = [String: String]()
+        params["idioma"] = language
+        if let demarcacion = demarcacion {
+            params["demarcacion"] = demarcacion
+        }
+        if let tipo = tipo {
+            params["tipo"] = "\(tipo)"
+        }
         let remote = BaseRemote<Origin>()
-        remote.getArrayObjects(url: url, headers: remote.getHeaders()) { (items, status) in
+        remote.getArrayObjects(url: url, headers: remote.getHeaders(), parameters: params) { (items, status) in
             completionClosure(items, status)
         }
         
@@ -197,15 +205,28 @@ open class ArqmobService: NSObject {
      Permite obtener las denominaciones de origen
      
      - Parameters:
-        - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'es'
-     
+     - language: Idioma en el que se devuelven los resultados. Si no se especifica por defecto se devuelven en 'gl'
+      - demarcación: Demarcación puede tener los siguientes valores. 
+        1    Monterrei:    monterrei
+        2    Ribeiro:    ribeiro
+        3    Rías Baixas:   rias-baixas
+        4    Ribeira Sacra:   ribeira-sacra
+        5    Valdeorras:    valdeorras
      
      - Returns: Array con las denominaciones de origen
      */
-    @objc open func getOriginWith(denominacion: String, language: String = "es", completionClosure: @escaping (_ responses: Array<Origin>?, _ codeStatus:Int)-> ())  {
-        let url = "http://dev.sixtema.es/mocks/enoturismo/\(denominacion)/data.json"
+    @objc open func getOriginWith(language: String = "gl",demarcacion: String? = nil, tipo: String? = nil, completionClosure: @escaping (_ responses: Array<Origin>?, _ codeStatus:Int)-> ())  {
+        let url =  ConstantsUrl.SERVER_DEV_URL + ConstantsUrl.API_ENOTURISMO + ConstantsUrl.ENOTURISMO_GET_RECURSOS
+       var params = [String: String]()
+        params["idioma"] = language
+        if let demarcacion = demarcacion {
+            params["demarcacion"] = demarcacion
+        }
+        if let tipo = tipo {
+            params["tipo"] = tipo
+        }
         let remote = BaseRemote<Origin>()
-        remote.getArrayObjects(url: url, headers: remote.getHeaders()) { (items, status) in
+        remote.getArrayObjects(url: url, headers: remote.getHeaders(), parameters: params) { (items, status) in
             completionClosure(items, status.rawValue)
         }
         

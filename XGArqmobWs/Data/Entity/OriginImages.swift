@@ -13,13 +13,14 @@ import ObjectMapper
 open class OriginImages: NSObject, Mappable {
     
     @objc open var url: String?
-
+    @objc open var thumb: String?
     public required convenience init?(map: Map) {
         self.init()
     }
     
     public func mapping(map: Map) {
         url          <- map["url"]
+        thumb          <- map["thumb"]
     }
     
 }

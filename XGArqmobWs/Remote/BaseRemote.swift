@@ -74,11 +74,11 @@ class BaseRemote <T: Mappable> {
             case .success(let json):
                 result = json
                 if(result != nil){
-                    print("ok " + url)
+                    print("ok " + finalUrl)
                        status = self.getStatusResponse(response.response?.statusCode ?? 200)
                 }
             case .failure(let error):
-                print("failure " + url + " " + String(response.response?.statusCode ?? -1) + error.localizedDescription);
+                print("failure " + finalUrl + " " + String(response.response?.statusCode ?? -1) + error.localizedDescription);
                 if NetworkState.isConnected() {
                     status = self.getStatusResponse(response.response?.statusCode ?? 500)
                 }else{
