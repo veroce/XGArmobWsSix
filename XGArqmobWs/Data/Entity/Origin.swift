@@ -41,8 +41,6 @@ open class Origin: NSObject, Mappable {
         descripcion             <- map["descripcion"]
         calle                   <- map["calle"]
         municipio               <- map["municipio"]
-        latitud                 <- map["latitud"]
-        longitud                <- map["longitud"]
         telefono                <- map["telefono"]
         email                   <- map["email"]
         web                     <- map["web"]
@@ -54,6 +52,16 @@ open class Origin: NSObject, Mappable {
         coordinates             <- map["coordinates"]
         city                    <- map["city"]
         calendario              <- map["calendario"]
+        var latitude: String?
+        var  longitude: String?
+        latitude <- map["latitud"]
+        longitude <- map["longitud"]
+        if let latitude = latitude {
+            self.latitud = Double(latitude) ?? 0
+        }
+        if let longitude = longitude {
+            self.longitud = Double(longitude) ?? 0
+        }
     }
     
 }

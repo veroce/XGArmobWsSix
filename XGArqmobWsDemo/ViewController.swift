@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func getOriginWith(_ denominacion: String, completion: @escaping (_ responses: Array<Origin>?, _ codeStatus:ConstantsStatus)-> ())  {
-        ArqmobService.shared.getOriginWith() { (items, status) in
+        ArqmobService.shared.getOriginWith(demarcacion: "") { (items, status) in
             completion(items, status)
         }
     }
